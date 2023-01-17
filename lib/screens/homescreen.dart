@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tecs/screens/about_us.dart';
 
 
 import 'LoginScreen.dart';
@@ -13,6 +14,11 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+
+  List<Widget> x=[
+    aboutus(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -77,7 +83,8 @@ class _homescreenState extends State<homescreen> {
             child: Column(children: [
               Expanded(
                 child: Container(
-                  child: Column(
+                  child: x[0],
+                  /*child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
@@ -112,7 +119,7 @@ class _homescreenState extends State<homescreen> {
                         ),
                       ),
                     ],
-                  ),
+                  ),*/
                 ),
               ),
              /* Buttonfield(
