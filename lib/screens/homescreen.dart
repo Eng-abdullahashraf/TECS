@@ -1,7 +1,10 @@
+import 'dart:ffi';
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tecs/screens/about_us.dart';
+import 'package:tecs/screens/contactus.dart';
 
 
 import 'LoginScreen.dart';
@@ -15,8 +18,10 @@ class homescreen extends StatefulWidget {
 
 class _homescreenState extends State<homescreen> {
 
+  int? s=0;
   List<Widget> x=[
     aboutus(),
+    contactus(),
   ];
 
   @override
@@ -83,8 +88,7 @@ class _homescreenState extends State<homescreen> {
             child: Column(children: [
               Expanded(
                 child: Container(
-                  child: x[0],
-                  /*child: Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
@@ -94,32 +98,10 @@ class _homescreenState extends State<homescreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 200.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Welcome In TECS',
-                              style: TextStyle(
-                                  color: Colors.amber,
-                                  fontSize: 30.0,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(35.0),
-                              child: Text(
-                                'Our company is working on converting traditional and outdated systems into using the latest technological systems',
-                                style: TextStyle(
-                                    color: Color(0xffffffff),
-                                    fontSize: 25.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-
-                          ],
-                        ),
+                        child: x[s!],
                       ),
                     ],
-                  ),*/
+                  ),
                 ),
               ),
              /* Buttonfield(
@@ -151,7 +133,7 @@ class _homescreenState extends State<homescreen> {
             onTap: (index)  {
             if(index==0){
               setState(() {
-
+                s=0;
               });
             }
             else if(index == 1){
@@ -172,7 +154,7 @@ class _homescreenState extends State<homescreen> {
             }
             else if(index==4){
               setState(() {
-
+                s=1;
               });
             }
             } ,
