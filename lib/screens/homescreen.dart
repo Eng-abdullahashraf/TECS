@@ -1,11 +1,12 @@
+import 'dart:developer';
 import 'dart:ffi';
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tecs/screens/Services.dart';
 import 'package:tecs/screens/about_us.dart';
 import 'package:tecs/screens/contactus.dart';
-
 
 import 'LoginScreen.dart';
 
@@ -17,11 +18,11 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
-
-  int? s=0;
-  List<Widget> x=[
+  int? s = 0;
+  List<Widget> x = [
     aboutus(),
     contactus(),
+    services(),
   ];
 
   @override
@@ -84,80 +85,50 @@ class _homescreenState extends State<homescreen> {
                 )),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(children: [
               Expanded(
                 child: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 150,
-                        width: 150,
-                        child: Image(image: AssetImage('images/logos.png')),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 200.0),
-                        child: x[s!],
-                      ),
-                    ],
-                  ),
+                  child: Image(image: AssetImage('images/logos.png')),
                 ),
               ),
-             /* Buttonfield(
-                hei: 55.0,
-                wid: double.infinity,
-                bcolor: Color(0xff2C74B3),
-                tex: 'Let \'s Get Started',
-                tcolor: Colors.amber,
-                tfont: 20.0,
-                onta: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => loginscreen()));
-                },
-                decoration: 25.0,
-              ),*/
+              Expanded(child: SingleChildScrollView(child: Container(child: x[s!]))),
             ]),
           ),
-
         ),
         bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Color(0xff000507),
-            items:[
-          Icon(Icons.account_balance_outlined,),
-          Icon(Icons.local_hospital),
-          Icon(Icons.login),
-          Icon(Icons.room_service),
-          Icon(Icons.contact_phone),
-        ],
-            onTap: (index)  {
-            if(index==0){
+          items: [
+            Icon(
+              Icons.account_balance_outlined,
+            ),
+            Icon(Icons.local_hospital),
+            Icon(Icons.login),
+            Icon(Icons.room_service),
+            Icon(Icons.contact_phone),
+          ],
+          onTap: (index) {
+            if (index == 0) {
               setState(() {
-                s=0;
+                s = 0;
               });
-            }
-            else if(index == 1){
-              setState(() {
-
-              });
-            }
-            else if(index==2){
+            } else if (index == 1) {
+              setState(() {});
+            } else if (index == 2) {
               setState(() {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => loginscreen()));
               });
-            }
-            else if(index==3){
+            } else if (index == 3) {
               setState(() {
-
+                s = 2;
+              });
+            } else if (index == 4) {
+              setState(() {
+                s = 1;
               });
             }
-            else if(index==4){
-              setState(() {
-                s=1;
-              });
-            }
-            } ,
+          },
         ),
       ),
     );

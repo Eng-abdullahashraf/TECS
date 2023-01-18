@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tecs/screens/tecsplash.dart';
 
 
 import 'screens/splashscreen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const tecsplash(),
+      home: SplashPage(),
     );
   }
 }
