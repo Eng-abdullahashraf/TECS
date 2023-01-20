@@ -4,6 +4,7 @@ import 'dart:ffi';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tecs/screens/Clinics.dart';
 import 'package:tecs/screens/Services.dart';
 import 'package:tecs/screens/about_us.dart';
 import 'package:tecs/screens/contactus.dart';
@@ -24,6 +25,7 @@ class _homescreenState extends State<homescreen> {
     aboutus(),
     contactus(),
     services(),
+    Clinics(),
   ];
 
   @override
@@ -75,7 +77,9 @@ class _homescreenState extends State<homescreen> {
                 s = 0;
               });
             } else if (index == 1) {
-              setState(() {});
+              setState(() {
+                s=3;
+              });
             } else if (index == 2) {
               setState(() {
                 Navigator.push(context,
