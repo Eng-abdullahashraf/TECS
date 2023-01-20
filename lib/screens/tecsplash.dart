@@ -13,12 +13,13 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return EasySplashScreen(
+      logoWidth: 150.0,
       logo: Image(image: AssetImage('images/logos.png'),),
       title: Text(
         "TECS",
         style: TextStyle(
           color: Colors.yellow,
-          fontSize: 18,
+          fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
       ),

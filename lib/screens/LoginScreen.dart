@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tecs/services/buttonfield.dart';
 import 'package:tecs/services/textfield.dart';
 
@@ -55,7 +56,7 @@ class _loginscreenState extends State<loginscreen> {
                       SizedBox(height: 25.0,),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Buttonfield(hei: 55.0, wid: double.infinity, bcolor: Color(0xff2C74B3), tex: 'LOGIN', tcolor: Colors.amber, tfont: 25.0, onta: (){},decoration: 10.0,),
+                        child: Buttonfield(hei: 55.0, wid: double.infinity, bcolor: Color(0xff2C74B3), tex: 'login'.tr, tcolor: Colors.amber, tfont: 25.0, onta: (){},decoration: 10.0,),
                       ),
                     ],
                   ),
