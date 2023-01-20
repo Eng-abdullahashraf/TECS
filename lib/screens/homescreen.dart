@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:tecs/screens/Services.dart';
 import 'package:tecs/screens/about_us.dart';
 import 'package:tecs/screens/contactus.dart';
+import 'package:tecs/services/buttonfield.dart';
 
 import 'LoginScreen.dart';
 
@@ -29,51 +30,7 @@ class _homescreenState extends State<homescreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        /*appBar: AppBar(
-          backgroundColor: Color(0xff2C74B3),
-          leading: Builder(builder: (context)=>IconButton(onPressed: (){
-            Scaffold.of(context).openDrawer();
-           }, icon: Icon(Icons.menu,color: Colors.amber,) ,),
-          ),
-          title: Text('TECS',style: TextStyle(color: Colors.amber),),
-        ),*/
-        /* drawer: Drawer(
-            child: ListView(
-          children: [
-            DrawerHeader(
-              child: Container(
-                  alignment: Alignment.center,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image(
-                        image: AssetImage('images/tecs.png'),
-                      height: 65.0),
-                      Text('Tecs',style: TextStyle(color: Colors.yellow , fontSize: 30.0),),
-                    ],
-                  )),
-              decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.only(bottomRight: Radius.circular(10.0),bottomLeft: Radius.circular(10.0))),
-            ),
-            ListTile(
-              title: const Text('Login',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-              leading: const Icon(Icons.login,color: Colors.black,),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>loginscreen()));
-              },
-            ),
-            ListTile(
-              title: const Text('Services',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-              leading: const Icon(Icons.miscellaneous_services,color: Colors.black,),
-              onTap: () {},
-            ),
-            ListTile(
-              title: const Text('Contact us',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-              leading: const Icon(Icons.contact_mail,color: Colors.black,),
-              onTap: () {},
-            ),
-            ListTile()
-          ],
-        )),*/
+
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -92,12 +49,17 @@ class _homescreenState extends State<homescreen> {
                   child: Image(image: AssetImage('images/logos.png')),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Buttonfield(hei: 45, wid: 200, bcolor: Colors.yellow, tex: 'احجز الان', tcolor: Colors.black, tfont: 15, onta: (){}, decoration: 10),
+              ),
               Expanded(child: SingleChildScrollView(child: Container(child: x[s!]))),
             ]),
           ),
         ),
         bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Color(0xff000507),
+          color: Color(0xffffffff),
           items: [
             Icon(
               Icons.account_balance_outlined,
