@@ -90,9 +90,9 @@ class _homescreenState extends State<homescreen> {
                 s = 2;
               });
             } else if (index == 4) {
-              setState(() {
-                s = 1;
-              });
+                setState(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => contactus()));              });
             }
           },
         ),

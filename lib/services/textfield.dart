@@ -27,5 +27,6 @@ class MyTextField extends StatelessWidget {
             labelText: LT,
             hintText: HT),
         obscureText: Scure);
+
   }
 }
