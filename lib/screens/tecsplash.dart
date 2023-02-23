@@ -14,20 +14,20 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return EasySplashScreen(
       logoWidth: 150.0,
-      logo: Image(image: AssetImage('images/logos.png'),),
+      logo: Image(image: AssetImage('images/nne.png'),),
       title: Text(
         "TECS",
         style: TextStyle(
-          color: Colors.yellow,
+          color: Colors.white,
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
       ),
-      backgroundColor: Color(0xff091332),
+      backgroundColor: Color(0xff00ABB3),
       showLoader: true,
       loadingText: Text("Loading...",
         style: TextStyle(
-          color: Colors.yellow,
+          color: Colors.white,
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),

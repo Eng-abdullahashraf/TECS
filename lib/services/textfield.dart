@@ -8,6 +8,7 @@ class MyTextField extends StatelessWidget {
   String? LT;
   String? HT;
   bool Scure;
+  double? rad;
 
   MyTextField(
       {required this.IC,
@@ -15,18 +16,23 @@ class MyTextField extends StatelessWidget {
       required this.PrefI,
       required this.HT,
       required this.LT,
-      required this.Scure});
+      required this.Scure,
+        required this.rad
+      });
+
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-        decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
-            iconColor: IC,
-            fillColor: FC,
-            prefixIcon: PrefI,
-            labelText: LT,
-            hintText: HT),
-        obscureText: Scure);
+    return Container(
+      decoration: BoxDecoration(color:FC,borderRadius: BorderRadius.circular(rad!)),
+      child: TextFormField(
+          decoration: InputDecoration(
+              iconColor: IC,
+              fillColor: FC,
+              prefixIcon: PrefI,
+              labelText: LT,
+              hintText: HT),
+          obscureText: Scure),
+    );
 
   }
 }

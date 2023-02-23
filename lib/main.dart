@@ -1,17 +1,24 @@
+import 'dart:io';
+import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tecs/locale/locale.dart';
+import 'package:tecs/network/Dio.dart';
 import 'package:tecs/screens/tecsplash.dart';
 
 
 import 'screens/splashscreen.dart';
 
-void main() {
+void main()  {
+
+  diohelp.init();
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {

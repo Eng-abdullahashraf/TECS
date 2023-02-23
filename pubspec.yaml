@@ -33,6 +33,11 @@ dependencies:
   easy_splash_screen:
   localization:
   get:
+  conditional_builder:
+  bloc:
+  flutter_bloc:
+  dio:
+  http:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -67,6 +72,8 @@ flutter:
     - images/logo.png
     - images/logos.png
     - images/mohamed.jpg
+    - images/nne.png
+    - assets/ca/
 
 
 
