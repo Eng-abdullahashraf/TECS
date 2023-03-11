@@ -9,15 +9,17 @@ class MyTextField extends StatelessWidget {
   String? HT;
   bool Scure;
   double? rad;
+  TextEditingController? controller;
 
   MyTextField(
-      {required this.IC,
-      required this.FC,
-      required this.PrefI,
-      required this.HT,
-      required this.LT,
-      required this.Scure,
-        required this.rad
+      { required this.IC,
+         required this.FC,
+        required this.PrefI,
+        required this.HT,
+       required this.LT,
+         required this.Scure,
+         required this.rad,
+        required this.controller
       });
 
   @override
@@ -31,7 +33,8 @@ class MyTextField extends StatelessWidget {
               prefixIcon: PrefI,
               labelText: LT,
               hintText: HT),
-          obscureText: Scure),
+          obscureText: Scure,
+        controller: controller),
     );
 
   }

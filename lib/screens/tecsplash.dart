@@ -1,6 +1,10 @@
 import 'package:easy_splash_screen/easy_splash_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tecs/cubit/cubit.dart';
 import 'package:tecs/screens/homescreen.dart';
 import 'package:flutter/material.dart';
+
+import '../cubit/states.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({Key? key}) : super(key: key);
@@ -12,6 +16,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
+
     return EasySplashScreen(
       logoWidth: 150.0,
       logo: Image(image: AssetImage('images/nne.png'),),
@@ -23,7 +28,7 @@ class _SplashPageState extends State<SplashPage> {
           fontWeight: FontWeight.bold,
         ),
       ),
-      backgroundColor: Color(0xff00ABB3),
+      backgroundColor: Color(0xff1F8AC7),
       showLoader: true,
       loadingText: Text("Loading...",
         style: TextStyle(
@@ -32,6 +37,7 @@ class _SplashPageState extends State<SplashPage> {
           fontWeight: FontWeight.bold,
         ),
       ),
+
       navigator: homescreen(),
       durationInSeconds: 5,
     );

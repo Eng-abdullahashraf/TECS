@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tecs/screens/homescreen.dart';
 
 class tecsplash extends StatefulWidget {
@@ -20,7 +21,7 @@ class _tecsplashState extends State<tecsplash> {
 
     Timer(
         Duration(seconds: 5),
-        () => Navigator.push(
+        () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => homescreen())));
   }
 
@@ -30,7 +31,7 @@ class _tecsplashState extends State<tecsplash> {
     return Scaffold(
       body: Container(
         height: double.infinity,
-        color: Color(0xff2C74B3),
+        color: Color(0xff1F8AC7),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -39,15 +40,23 @@ class _tecsplashState extends State<tecsplash> {
               child: Text(
                 'TECS APP',
                 style: TextStyle(
-                    color: Color(0xffffe247),
+                    color: Color(0xffffffff),
                     fontWeight: FontWeight.bold,
                     fontSize: 25.0),
               ),
             ),
             Expanded(
-              child: Image(
-                image: AssetImage('images/logo.png'),
-              ),
+              child:
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(
+                      image: AssetImage('images/nne.png'),
+                      ),
+                    Text('TECS',style: TextStyle(fontSize: 40.0,color: Color(0xffffffff),fontWeight: FontWeight.bold),),
+                  ],
+                ),
+
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -56,7 +65,7 @@ class _tecsplashState extends State<tecsplash> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Powerd By',
+                    'powerd'.tr,
                     style: TextStyle(
                         color: Color(0xffffffff),
                         fontWeight: FontWeight.bold,
@@ -68,7 +77,7 @@ class _tecsplashState extends State<tecsplash> {
                   Text(
                     'TECS',
                     style: TextStyle(
-                        color: Color(0xffffe247),
+                        color: Color(0xffffffff),
                         fontWeight: FontWeight.bold,
                         fontSize: 15.0),
                   ),

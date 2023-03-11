@@ -14,8 +14,6 @@ class Buttonfield extends StatelessWidget {
   double? decoration;
 
 
-
-
   Buttonfield({
     required this.hei,
     required this.wid,
@@ -26,6 +24,7 @@ class Buttonfield extends StatelessWidget {
     required this.onta,
     required this.decoration,
 });
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

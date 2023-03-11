@@ -74,7 +74,7 @@ flutter:
     - images/mohamed.jpg
     - images/nne.png
     - assets/ca/
-
+    - images/statistic.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

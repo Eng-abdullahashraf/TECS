@@ -15,4 +15,9 @@ class diohelp {
     return await dio!.get(URL!);
 
   }
+
+  static Future<Response> postdata({@required String? URL,@required Map<String,dynamic>? data}) async {
+    return  dio!.post(URL!,data: data);
+
+  }
 }
