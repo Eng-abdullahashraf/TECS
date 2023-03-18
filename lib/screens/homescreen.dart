@@ -69,6 +69,8 @@ class homescreen extends StatelessWidget {
                     } else if (index == 1) {
                       Mycubit.get(context).getdataapi();
                       Mycubit.get(context).changewidgethome(index);
+                      Mycubit.get(context).Createdatabase();
+                      Mycubit.get(context).inserttodatabase();
                     } else if (index == 2) {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => loginscreen()));
