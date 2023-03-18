@@ -13,13 +13,14 @@ class Clinics extends StatelessWidget {
         listener: (context,state){},
         builder: (context,state){
           List? list=Mycubit.get(context).dataset;
+          //list![index]
           return Container(
             height: 250.0,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context,index)=>clinics(list![index]),
+              itemBuilder: (context,index)=>clinics(),
               separatorBuilder: (context, index) => SizedBox(width: 10.0,),
-              itemCount: list!.length,),
+              itemCount: 10),
 
           );
         });

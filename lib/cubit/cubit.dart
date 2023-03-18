@@ -13,6 +13,8 @@ class Mycubit extends Cubit<tecsstates> {
   Mycubit() : super(tecsinitialstate());
 
   // => BlocProvider.of(context)
+
+
   static Mycubit get(context) => BlocProvider.of(context);
 
   int? s = 0;

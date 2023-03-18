@@ -47,7 +47,7 @@ class _tecsplashState extends State<tecsplash> {
             ),
             Expanded(
               child:
-                Row(
+                Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image(
